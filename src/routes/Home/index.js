@@ -1,15 +1,44 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { StyleSheet } from 'react-native'
+import styled from 'styled-components/native'
+import { FontSize, Colors } from '@styles'
+import Searchbar from '@components/Searchbar'
+
+const vSpacing = 10
+
+const StyledHome = styled.View`
+                    padding:50px 30px;
+                    `
+
+const Title = styled.Text`
+                font-size:${FontSize.large}px;
+                font-weight:bold;
+                margin-bottom:${vSpacing}px;
+                `
+
+const Description = styled.Text`
+                    font-size:${FontSize.regular}px;
+                    color:${Colors.mountainMist};
+                    line-height:${FontSize.regular * 1.5}px;
+                    `
+
+const styles = StyleSheet.create({
+    searchbar: {
+        marginTop: vSpacing,
+        marginBottom: vSpacing
+    }
+})
 
 export default Home = () => {
     return (
-        <View>
-            <Text>
+        <StyledHome>
+            <Title>
                 Pokedex
-            </Text>
-            <Text>
+            </Title>
+            <Description>
                 Search for Pokemon by name or using the National Pokedex number.
-            </Text>
-        </View>
+            </Description>
+            <Searchbar style={styles.searchbar} />
+        </StyledHome>
     )
 }
