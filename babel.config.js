@@ -8,7 +8,10 @@ module.exports = function (api) {
         {
           'alias': {
             '@routes': './src/routes',
-            '@navigator': './src/navigator'
+            '@navigator': './src/navigator',
+            '@styles': './src/styles',
+            '@components': './src/components',
+            '@assets': './src/assets'
           }
         }
       ]
