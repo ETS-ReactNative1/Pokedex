@@ -1,6 +1,7 @@
 import React from "react"
 import styled from 'styled-components/native'
-// import SearchIcon from '@assets/icons/search.svg'
+import PropTypes from 'prop-types'
+import SearchIcon from '@assets/icons/search.svg'
 import { Colors, FontSize } from '@styles'
 
 const StyledSearchbar = styled.View`
@@ -9,19 +10,28 @@ const StyledSearchbar = styled.View`
                             padding:15px;
                             border-radius:10px;
                             display:flex;
+                            flex-direction:row;
+                            align-items:center;
                         `
 
 const Input = styled.TextInput`
-
+                flex:1;
+                margin-left:15px;
                 `
 
-export default Searchbar = ({ style }) => {
+const Searchbar = ({ style }) => {
     return (
         <StyledSearchbar
             style={style}
         >
-            {/* <SearchIcon /> */}
+            <SearchIcon width={FontSize.regular} />
             <Input placeholder='What pokemon are you looking for?' />
         </StyledSearchbar>
     )
 }
+
+Searchbar.propTypes = {
+    style: PropTypes.object
+}
+
+export default Searchbar
