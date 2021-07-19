@@ -51,6 +51,8 @@ const StyledType = styled.View`
                     align-self:flex-start;
                     padding:10px;
                     border-radius:5px;
+                    flex-direction:row;
+                    align-items:center;
                     `
 
 const StyledText = styled(Span)`
