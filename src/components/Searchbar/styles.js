@@ -7,7 +7,6 @@ const StyledSearchbar = styled.View`
     font-size:${FontSize.regular}px;
     padding:15px;
     border-radius:10px;
-    display:flex;
     flex-direction:row;
     align-items:center;
 `
