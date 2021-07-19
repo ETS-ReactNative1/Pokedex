@@ -4,7 +4,7 @@ export const Colors = {
     white: '#FFFFFF',
     wildSand: '#F6F6F6',
     fernGreen: '#528345',
-    //types
+    /* types */
     atlantis: '#9DC130',
     mildGray: '#5F606D',
     lochmara: '#0773C7',

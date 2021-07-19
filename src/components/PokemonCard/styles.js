@@ -4,14 +4,18 @@ import { Colors } from '@styles/color'
 import Heading from '@components/Heading'
 import Span from '@components/Span'
 
+/* set of styles shared among multiple components */
+const sharedStyles = `
+    font-weight:bold;
+`
+
+/* styled components */
 const StyledPokemonCard = styled.TouchableOpacity`
     padding:20px 10px;
     border-radius:10px;
 `
 
-const sharedStyles = `
-    font-weight:bold;
-`
+const Column = styled.View``
 
 const Number = styled(Span)`
     ${sharedStyles}
@@ -24,7 +28,6 @@ const Name = styled(Heading)`
 `
 
 const TypesWrapper = styled.View`
-    display:flex;
     flex-direction:row;
 `
 
@@ -36,6 +39,7 @@ const styles = StyleSheet.create({
 
 module.exports = {
     StyledPokemonCard,
+    Column,
     Number,
     Name,
     TypesWrapper,

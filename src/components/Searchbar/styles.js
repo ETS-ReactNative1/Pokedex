@@ -16,6 +16,7 @@ const Input = styled.TextInput`
     margin-left:15px;
 `
 
+/* other styles */
 const styles = StyleSheet.create({
     searchIcon: {
         width: FontSize.regular

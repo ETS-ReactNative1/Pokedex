@@ -2,7 +2,11 @@ import styled from 'styled-components'
 import { Colors } from '@styles/color'
 import Span from '@components/Span'
 
-//  return type background color
+/**
+ * Returns tag color for type
+ * @param  {string} type
+ * @return {string} color
+ */
 const getBgColor = (type) => {
     switch (type) {
         case 'bug':

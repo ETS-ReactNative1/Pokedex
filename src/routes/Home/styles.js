@@ -4,6 +4,7 @@ import { Colors } from '@styles'
 import Heading from '@components/Heading'
 import Span from '@components/Span'
 
+//  vertical margin between components
 const vSpacing = 10
 
 const StyledHome = styled.View`

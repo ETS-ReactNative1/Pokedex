@@ -22,6 +22,11 @@ import WaterIcon from '@assets/types/water.svg'
 import { FontSize } from '@styles/typography'
 
 const useType = () => {
+    /**
+     * Returns svg icon based on type
+     * @param  {string} type
+     * @return {component} svg
+     */
     const getIcon = (type) => {
         let TypeIcon
 
