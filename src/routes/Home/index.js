@@ -1,8 +1,11 @@
 import React from 'react'
 import { StyleSheet } from 'react-native'
 import styled from 'styled-components/native'
-import { FontSize, Colors } from '@styles'
+import { Colors } from '@styles'
+import Heading from '@components/Heading'
+import Span from '@components/Span'
 import Searchbar from '@components/Searchbar'
+import PokemonCard from '@components/PokemonCard'
 
 const vSpacing = 10
 
@@ -10,22 +13,17 @@ const StyledHome = styled.View`
                     padding:50px 30px;
                     `
 
-const Title = styled.Text`
-                font-size:${FontSize.large}px;
-                font-weight:bold;
+const Title = styled(Heading)`
                 margin-bottom:${vSpacing}px;
                 `
 
-const Description = styled.Text`
-                    font-size:${FontSize.regular}px;
+const Description = styled(Span)`
                     color:${Colors.mountainMist};
-                    line-height:${FontSize.regular * 1.5}px;
                     `
 
 const styles = StyleSheet.create({
     searchbar: {
-        marginTop: vSpacing,
-        marginBottom: vSpacing
+        marginVertical: vSpacing
     }
 })
 
@@ -39,6 +37,7 @@ export default Home = () => {
                 Search for Pokemon by name or using the National Pokedex number.
             </Description>
             <Searchbar style={styles.searchbar} />
+            <PokemonCard number={12} name='something' types={['bug', 'poison']} />
         </StyledHome>
     )
 }
