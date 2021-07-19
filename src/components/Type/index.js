@@ -1,21 +1,10 @@
 import React from 'react'
-import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import { Colors } from '@styles/color'
-
-const StyledType = styled.View``
-
-const StyledText = styled.Text`
-                    color:${Colors.white};
-                    `
+import { StyledType, StyledText } from './styles'
 
 const Type = ({ style, type }) => {
-    const getBgColor = () => {
-
-    }
-
     return (
-        <StyledType style={style}>
+        <StyledType style={style} type={type}>
             <StyledText>
                 {type}
             </StyledText>
