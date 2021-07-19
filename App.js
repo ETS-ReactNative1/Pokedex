@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import MainNavigator from "@navigator/MainNavigator"
 
-export default function App () {
+export default App = () => {
   return (
     <MainNavigator />
   );
