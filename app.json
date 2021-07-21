@@ -17,13 +17,15 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.amon.pokedex"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.amon.pokedex"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -43,6 +45,7 @@
         "wasm",
         "svg"
       ]
-    }
+    },
+    "entryPoint": "node_modules/expo/AppEntry.js"
   }
 }
