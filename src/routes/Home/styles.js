@@ -22,6 +22,9 @@ const Description = styled(Span)`
 const styles = StyleSheet.create({
     searchbar: {
         marginVertical: vSpacing
+    },
+    pokemonCard: {
+        marginBottom: vSpacing
     }
 })
 
