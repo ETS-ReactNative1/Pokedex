@@ -12,7 +12,7 @@ const Span = ({ children, style }) => {
 
 Span.propTypes = {
     children: PropTypes.node,
-    style: PropTypes.object
+    style: PropTypes.array
 }
 
 export default Span

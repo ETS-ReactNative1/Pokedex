@@ -12,7 +12,7 @@ const Heading = ({ children, style }) => {
 
 Heading.propTypes = {
     children: PropTypes.node,
-    style: PropTypes.object
+    style: PropTypes.array
 }
 
 export default Heading
