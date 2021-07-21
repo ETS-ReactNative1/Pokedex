@@ -2,7 +2,7 @@ import React from 'react'
 import { ScrollView } from 'react-native'
 import Searchbar from '@components/Searchbar'
 import PokemonCard from '@components/PokemonCard'
-import pokemons from '../../pokemon.json'
+import pokemons from '@redux/pokemon.json'
 import { StyledHome, Title, Description, styles } from './styles'
 
 export default Home = () => {
