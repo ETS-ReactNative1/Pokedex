@@ -31,58 +31,58 @@ const useType = () => {
         let TypeIcon
 
         switch (type) {
-            case 'bug':
+            case 'Bug':
                 TypeIcon = BugIcon
                 break
-            case 'dark':
+            case 'Dark':
                 TypeIcon = DarkIcon
                 break
-            case 'dragon':
+            case 'Dragon':
                 TypeIcon = DragonIcon
                 break
-            case 'electric':
+            case 'Electric':
                 TypeIcon = ElectricIcon
                 break
-            case 'fairy':
+            case 'Fairy':
                 TypeIcon = FairyIcon
                 break
-            case 'fighting':
+            case 'Fighting':
                 TypeIcon = FightingIcon
                 break
-            case 'fire':
+            case 'Fire':
                 TypeIcon = FireIcon
                 break
-            case 'flying':
+            case 'Flying':
                 TypeIcon = FlyingIcon
                 break
-            case 'ghost':
+            case 'Ghost':
                 TypeIcon = GhostIcon
                 break
-            case 'grass':
+            case 'Grass':
                 TypeIcon = GrassIcon
                 break
-            case 'ground':
+            case 'Ground':
                 TypeIcon = GroundIcon
                 break
-            case 'ice':
+            case 'Ice':
                 TypeIcon = IceIcon
                 break
-            case 'normal':
+            case 'Normal':
                 TypeIcon = NormalIcon
                 break
-            case 'poison':
+            case 'Poison':
                 TypeIcon = PoisonIcon
                 break
-            case 'psychic':
+            case 'Psychic':
                 TypeIcon = PsychicIcon
                 break
-            case 'rock':
+            case 'Rock':
                 TypeIcon = RockIcon
                 break
-            case 'steel':
+            case 'Steel':
                 TypeIcon = SteelIcon
                 break
-            case 'water':
+            case 'Water':
                 TypeIcon = WaterIcon
                 break
         }

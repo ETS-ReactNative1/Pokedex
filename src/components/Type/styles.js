@@ -9,44 +9,42 @@ import Span from '@components/Span'
  */
 const getBgColor = (type) => {
     switch (type) {
-        case 'bug':
+        case 'Bug':
             return Colors.atlantis
-        case 'dark':
+        case 'Dark':
             return Colors.mildGray
-        case 'dragon':
-            return Colors.lochMara
-        case 'electric':
+        case 'Dragon':
+            return Colors.lochmara
+        case 'Electric':
             return Colors.goldenDream
-        case 'fairy':
+        case 'Fairy':
             return Colors.lavenderMargenta
-        case 'fight':
+        case 'Fighting':
             return Colors.cabaret
-        case 'fire':
+        case 'Fire':
             return Colors.tanHide
-        case 'flying':
+        case 'Flying':
             return Colors.cornFlower
-        case 'ghost':
+        case 'Ghost':
             return Colors.blueMarguerite
-        case 'grass':
+        case 'Grass':
             return Colors.fern
-        case 'ground':
+        case 'Ground':
             return Colors.japonica
-        case 'ice':
+        case 'Ice':
             return Colors.bermuda
-        case 'normal':
+        case 'Normal':
             return Colors.manatee
-        case 'poison':
+        case 'Poison':
             return Colors.amethyst
-        case 'psychic':
+        case 'Psychic':
             return Colors.froly
-        case 'rock':
+        case 'Rock':
             return Colors.yuma
-        case 'steel':
+        case 'Steel':
             return Colors.hippieBlue
-        case 'water':
+        case 'Water':
             return Colors.havelockBlue
-        default:
-            return Colors.white
     }
 }
 
