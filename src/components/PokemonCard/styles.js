@@ -18,7 +18,7 @@ const StyledPokemonCard = styled.TouchableOpacity`
     position:relative;
     elevation:5;
     shadow-color: #000;
-    shadow-offset: {width: 0, height: 2};
+    shadow-offset: 0 2px;
     shadow-opacity: 0.25;
     shadow-radius: 3.84px;
 `

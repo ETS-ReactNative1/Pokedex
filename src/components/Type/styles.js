@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components/native'
 import { Colors } from '@styles/color'
 import Span from '@components/Span'
 
