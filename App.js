@@ -1,10 +1,14 @@
 import React from 'react';
+import { Provider } from 'react-redux'
 import { StyleSheet, Text, View } from 'react-native';
-import MainNavigator from "@navigator/MainNavigator"
+import MainNavigator from '@navigator/MainNavigator'
+import store from '@redux/store'
 
 export default App = () => {
   return (
-    <MainNavigator />
+    <Provider store={store}>
+      <MainNavigator />
+    </Provider>
   );
 }
 

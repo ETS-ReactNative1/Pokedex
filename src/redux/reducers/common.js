@@ -5,7 +5,7 @@ const initialState = {
     error: null
 }
 
-export default function commonReducer (state = initialState, action) {
+export default function common (state = initialState, action) {
     switch (action.type) {
         case SET_IS_LOADING:
             return {
@@ -17,5 +17,7 @@ export default function commonReducer (state = initialState, action) {
                 ...state,
                 error: action.message
             }
+        default:
+            return state
     }
 }

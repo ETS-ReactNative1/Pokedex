@@ -1,11 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
 import { ScrollView } from 'react-native'
 import Searchbar from '@components/Searchbar'
 import PokemonCard from '@components/PokemonCard'
-import pokemons from '@redux/pokemon.json'
+import { getAllPokemons } from '../../redux/actions/pokemon'
+// import pokemons from '@redux/pokemon.json'
 import { StyledHome, Title, Description, styles } from './styles'
 
 export default Home = () => {
+    const dispatch = useDispatch()
+    const pokemons = useSelector((state) => state.pokemon.items)
+
+    useEffect(() => {
+        dispatch(getAllPokemons())
+    }, [])
+
     return (
         <StyledHome>
             <Title>
@@ -17,7 +26,7 @@ export default Home = () => {
             <Searchbar style={styles.searchbar} />
             <ScrollView>
                 {
-                    pokemons.map(pokemon =>
+                    pokemons.length > 0 && pokemons.map(pokemon =>
                         <PokemonCard key={pokemon.id} number={pokemon.num}
                             name={pokemon.name}
                             types={pokemon.type}
