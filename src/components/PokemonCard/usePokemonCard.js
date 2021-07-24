@@ -21,6 +21,9 @@ const usePokemonCard = (image) => {
     const getBgColor = (imageURL) => {
         getColorFromURL(imageURL).then(colors => {
             setColor(colors.primary)
+        }).catch(error => {
+            console.log(error)
+            // throw error
         })
     }
 

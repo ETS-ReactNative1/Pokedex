@@ -13,11 +13,11 @@ import {
     styles
 } from './styles'
 
-const PokemonCard = ({ number, name, types, image, style }) => {
+const PokemonCard = ({ number, name, types, image, style, onClick }) => {
     const { color } = usePokemonCard(image)
 
     return (
-        <StyledPokemonCard style={[{ backgroundColor: color }, style]}>
+        <StyledPokemonCard style={[{ backgroundColor: color }, style]} onPress={onClick}>
             <Column>
                 <Number>
                     #{number}
@@ -45,7 +45,8 @@ PokemonCard.propTypes = {
     name: PropTypes.string,
     types: PropTypes.array,
     image: PropTypes.string,
-    style: PropTypes.object
+    style: PropTypes.object,
+    onClick: PropTypes.func
 }
 
 export default PokemonCard
