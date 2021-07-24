@@ -2,13 +2,13 @@ import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { ScrollView } from 'react-native'
 import PropTypes from 'prop-types'
-import { Routes } from '@routes'
+import { Pokemon } from '@routes'
 import Searchbar from '@components/Searchbar'
 import PokemonCard from '@components/PokemonCard'
 import { getAllPokemons } from '@redux/actions/pokemon'
 import { StyledHome, Title, Description, styles } from './styles'
 
-export default Home = ({ navigation }) => {
+const Home = ({ navigation }) => {
     const dispatch = useDispatch()
     const pokemons = useSelector((state) => state.pokemon.items)
 
@@ -33,7 +33,7 @@ export default Home = ({ navigation }) => {
                             types={pokemon.type}
                             image={pokemon.img}
                             style={styles.pokemonCard}
-                            onClick={() => navigation.navigate(Routes.Pokemon)}
+                            onPress={() => navigation.navigate(Pokemon, { pokemon })}
                         />
                     )
                 }
@@ -45,3 +45,5 @@ export default Home = ({ navigation }) => {
 Home.propTypes = {
     navigation: PropTypes.object
 }
+
+export default Home

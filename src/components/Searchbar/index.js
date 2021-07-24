@@ -1,14 +1,13 @@
 import React from "react"
 import PropTypes from 'prop-types'
-import SearchIcon from '@assets/icons/search.svg'
-import { StyledSearchbar, Input, styles } from './styles'
+import { StyledSearchbar, StyledSearchIcon, Input } from './styles'
 
 const Searchbar = ({ style }) => {
     return (
         <StyledSearchbar
             style={style}
         >
-            <SearchIcon style={styles.searchIcon} />
+            <StyledSearchIcon />
             <Input placeholder='What pokemon are you looking for?' />
         </StyledSearchbar>
     )

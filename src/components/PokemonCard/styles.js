@@ -4,6 +4,7 @@ import { StyleSheet } from "react-native"
 import { Colors } from '@styles/color'
 import Heading from '@components/Heading'
 import Span from '@components/Span'
+import { SharedElement } from 'react-navigation-shared-element'
 
 /* set of styles shared among multiple components */
 const sharedStyles = `
@@ -47,10 +48,13 @@ const Column = styled.View`
 const Image = styled.Image`
                 width:${screenWidth * 0.4}px;
                 height:150px;
-                position:absolute;
-                right:0;
-                top:0;
                 `
+
+const ImageWrapper = styled(SharedElement)`
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    `
 
 const styles = StyleSheet.create({
     type: {
@@ -64,6 +68,7 @@ module.exports = {
     Number,
     Name,
     TypesWrapper,
+    ImageWrapper,
     Image,
     styles
 }

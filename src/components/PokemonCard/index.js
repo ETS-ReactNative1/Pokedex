@@ -10,14 +10,15 @@ import {
     Name,
     TypesWrapper,
     Image,
+    ImageWrapper,
     styles
 } from './styles'
 
-const PokemonCard = ({ number, name, types, image, style, onClick }) => {
+const PokemonCard = ({ number, name, types, image, style, onPress }) => {
     const { color } = usePokemonCard(image)
 
     return (
-        <StyledPokemonCard style={[{ backgroundColor: color }, style]} onPress={onClick}>
+        <StyledPokemonCard style={[{ backgroundColor: color }, style]} onPress={onPress}>
             <Column>
                 <Number>
                     #{number}
@@ -35,7 +36,9 @@ const PokemonCard = ({ number, name, types, image, style, onClick }) => {
                     }
                 </TypesWrapper>
             </Column>
-            <Image resizeMode='contain' defaultSource={PokemonDefaultImg} source={{ uri: image }} />
+            <ImageWrapper id={number}>
+                <Image resizeMode='contain' defaultSource={PokemonDefaultImg} source={{ uri: image }} />
+            </ImageWrapper>
         </StyledPokemonCard>
     )
 }
@@ -46,7 +49,7 @@ PokemonCard.propTypes = {
     types: PropTypes.array,
     image: PropTypes.string,
     style: PropTypes.object,
-    onClick: PropTypes.func
+    onPress: PropTypes.func
 }
 
 export default PokemonCard

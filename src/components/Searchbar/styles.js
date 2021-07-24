@@ -1,6 +1,7 @@
 import styled from 'styled-components/native'
 import { Colors, FontSize } from '@styles'
 import { StyleSheet } from 'react-native'
+import SearchIcon from '@assets/icons/search.svg'
 
 const StyledSearchbar = styled.View`
     background-color:${Colors.wildSand};
@@ -16,15 +17,12 @@ const Input = styled.TextInput`
     margin-left:15px;
 `
 
-/* other styles */
-const styles = StyleSheet.create({
-    searchIcon: {
-        width: FontSize.regular
-    }
-})
+const StyledSearchIcon = styled(SearchIcon)`
+                        width:${FontSize.regular}px;
+                        `
 
 module.exports = {
     StyledSearchbar,
-    Input,
-    styles
+    StyledSearchIcon,
+    Input
 }

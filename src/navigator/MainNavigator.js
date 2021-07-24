@@ -1,29 +1,33 @@
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
-import { createStackNavigator } from "@react-navigation/stack"
-import { Routes } from '@routes'
-import Home from '@routes/Home'
-import Pokemon from '@routes/Pokemon'
+import { createSharedElementStackNavigator } from 'react-navigation-shared-element'
+// import { createStackNavigator } from "@react-navigation/stack"
+import { Home, Pokemon } from '@routes'
+import HomeScreen from '@routes/Home'
+import PokemonScreen from '@routes/Pokemon'
 import { Colors } from '@styles'
 
-const MainStack = createStackNavigator()
+// const MainStack = createStackNavigator()
+const MainStack = createSharedElementStackNavigator()
 
 export default MainNavigator = () => {
     return (
         <NavigationContainer>
-            <MainStack.Navigator>
-                <MainStack.Screen name={Routes.Home}
-                    component={Home}
+            <MainStack.Navigator screenOptions={{
+                headerShown: false
+            }}>
+                <MainStack.Screen name={Home}
+                    component={HomeScreen}
                     options={{
-                        headerShown: false,
                         cardStyle: {
                             backgroundColor: Colors.white
                         }
                     }} />
-                <MainStack.Screen name={Routes.Pokemon}
-                    component={Pokemon}
+                <MainStack.Screen name={Pokemon}
+                    component={PokemonScreen}
                 />
             </MainStack.Navigator>
         </NavigationContainer>
     )
 }
+

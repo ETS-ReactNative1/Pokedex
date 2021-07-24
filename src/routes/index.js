@@ -1,4 +1,4 @@
-export const Routes = {
+module.exports = {
     Home: 'Home',
     Pokemon: 'Pokemon'
 }

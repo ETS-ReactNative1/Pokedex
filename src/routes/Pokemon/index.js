@@ -1,18 +1,32 @@
 import React, { useEffect } from 'react'
-import { useDispatch } from 'react-redux'
-import { getAllPokemons } from '@redux/actions/pokemon'
-import { StyledPokemon, Title } from './styles'
+import PropTypes from 'prop-types'
+import { StyledPokemon, BackButton, StyledBackIcon, Title, Image, ImageWrapper } from './styles'
 
-export default Pokemon = () => {
-    const dispatch = useDispatch()
+const Pokemon = ({ route, navigation }) => {
 
-    useEffect(() => {
-        dispatch(getAllPokemons())
-    }, [])
+    const { pokemon } = route.params
 
     return (
         <StyledPokemon>
-            <Title>Something</Title>
+            <BackButton onPress={() => navigation.goBack()}>
+                <StyledBackIcon />
+            </BackButton>
+            <Title>{pokemon.name}</Title>
+            <ImageWrapper id={pokemon.num}>
+                <Image resizeMode='contain' source={{ uri: pokemon.img }} />
+            </ImageWrapper>
         </StyledPokemon>
     )
 }
+
+Pokemon.propTypes = {
+    route: PropTypes.object,
+    navigation: PropTypes.object
+}
+
+Pokemon.sharedElements = (route, otherRoute, showing) => {
+    const { pokemon } = route.params
+    return [pokemon.num]
+}
+
+export default Pokemon
