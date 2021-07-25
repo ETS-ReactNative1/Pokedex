@@ -19,7 +19,7 @@ const Type = ({ style, type }) => {
 }
 
 Type.propTypes = {
-    style: PropTypes.object
+    style: PropTypes.array
 }
 
 export default Type

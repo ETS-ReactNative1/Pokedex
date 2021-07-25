@@ -14,7 +14,7 @@ const Searchbar = ({ style }) => {
 }
 
 Searchbar.propTypes = {
-    style: PropTypes.object
+    style: PropTypes.array
 }
 
 export default Searchbar
