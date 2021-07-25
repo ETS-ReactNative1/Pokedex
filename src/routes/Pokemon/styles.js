@@ -1,5 +1,4 @@
-import { Dimensions } from 'react-native'
-import { StyleSheet } from "react-native"
+import { StyleSheet } from 'react-native'
 import styled from 'styled-components/native'
 import { FontSize } from '@styles'
 import Heading from '@components/Heading'
@@ -8,20 +7,25 @@ import { SharedElement } from 'react-navigation-shared-element'
 
 const StyledPokemon = styled.View``
 
-const screenWidth = Dimensions.get('window').width
-
+/* Go Back button */
 const BackButton = styled.TouchableOpacity`
-                        background-color:black;
+                    padding:10px;
                     `
 
 const StyledBackIcon = styled(BackIcon)`
                         width:${FontSize.regular}px;
+                        transform:scaleX(-1);
                         `
 
-const Title = styled(Heading)``
+const Overlay = styled.View`
+                position:absolute;
+                height:100%;
+                width:100%;
+                opacity:0.8;
+                `
 
 const Image = styled.Image`
-                width:${screenWidth * 0.4}px;
+                aspect-ratio:1;
                 height:150px;
                 `
 
@@ -29,17 +33,11 @@ const ImageWrapper = styled(SharedElement)`
                     align-items: center;
                     `
 
-const styles = StyleSheet.create({
-    imageWrapper: {
-        alignItems: 'center'
-    }
-})
 module.exports = {
     StyledPokemon,
     BackButton,
     StyledBackIcon,
-    Title,
     ImageWrapper,
     Image,
-    styles
+    Overlay
 }
