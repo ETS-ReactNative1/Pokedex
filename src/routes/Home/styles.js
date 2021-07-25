@@ -3,6 +3,8 @@ import styled from 'styled-components/native'
 import { Colors } from '@styles'
 import Heading from '@components/Heading'
 import Span from '@components/Span'
+import Searchbar from '@components/Searchbar'
+import PokemonCard from '@components/PokemonCard'
 
 //  vertical margin between components
 const vSpacing = 10
@@ -19,18 +21,18 @@ const Description = styled(Span)`
                     color:${Colors.mountainMist};
                     `
 
-const styles = StyleSheet.create({
-    searchbar: {
-        marginVertical: vSpacing
-    },
-    pokemonCard: {
-        marginBottom: vSpacing
-    }
-})
+const StyledSearchbar = styled(Searchbar)`
+                        margin:${vSpacing}px 0;
+                        `
+
+const StyledPokemonCard = styled(PokemonCard)`
+                            margin-bottom:${vSpacing}px;
+                            `
 
 module.exports = {
     StyledHome,
     Title,
     Description,
-    styles
+    StyledSearchbar,
+    StyledPokemonCard
 }
