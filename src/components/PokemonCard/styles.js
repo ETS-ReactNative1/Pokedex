@@ -1,5 +1,4 @@
 import styled from 'styled-components/native'
-import { Dimensions } from 'react-native'
 import { Colors } from '@styles/color'
 import Heading from '@components/Heading'
 import Span from '@components/Span'
@@ -22,6 +21,7 @@ const StyledPokemonCard = styled.TouchableOpacity`
     shadow-offset: 0 2px;
     shadow-opacity: 0.25;
     shadow-radius: 3.84px;
+    max-width:425px;
 `
 
 const Number = styled(Span)`
@@ -43,21 +43,19 @@ const StyledType = styled(Type)`
                     margin-right:10px;
                     `
 
-const screenWidth = Dimensions.get('window').width
-
 const Column = styled.View`
-                width:${screenWidth * 0.6}px;
+                width:70%;
                 `
 
 const Image = styled.Image`
-                width:${screenWidth * 0.4}px;
-                height:150px;
+                aspect-ratio:1;
                 `
 
 const ImageWrapper = styled(SharedElement)`
                     position: absolute;
                     right: 0;
                     top: 0;
+                    width:40%;
                     `
 
 module.exports = {
