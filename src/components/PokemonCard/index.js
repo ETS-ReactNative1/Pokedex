@@ -1,6 +1,5 @@
 import React from "react"
 import PropTypes from 'prop-types'
-import Type from '@components/Type'
 import usePokemonCard from './usePokemonCard'
 import PokemonDefaultImg from '@assets/images/pokemon-default.png'
 import {
@@ -9,9 +8,9 @@ import {
     Number,
     Name,
     TypesWrapper,
+    StyledType,
     Image,
-    ImageWrapper,
-    styles
+    ImageWrapper
 } from './styles'
 
 const PokemonCard = ({ number, name, types, image, style, onPress }) => {
@@ -29,9 +28,9 @@ const PokemonCard = ({ number, name, types, image, style, onPress }) => {
                 <TypesWrapper>
                     {
                         types.map((type, ind) =>
-                            <Type key={ind}
+                            <StyledType key={ind}
                                 type={type}
-                                style={styles.type} />
+                            />
                         )
                     }
                 </TypesWrapper>
@@ -48,7 +47,7 @@ PokemonCard.propTypes = {
     name: PropTypes.string,
     types: PropTypes.array,
     image: PropTypes.string,
-    style: PropTypes.object,
+    style: PropTypes.array,
     onPress: PropTypes.func
 }
 

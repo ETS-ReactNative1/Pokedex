@@ -1,9 +1,9 @@
 import styled from 'styled-components/native'
 import { Dimensions } from 'react-native'
-import { StyleSheet } from "react-native"
 import { Colors } from '@styles/color'
 import Heading from '@components/Heading'
 import Span from '@components/Span'
+import Type from '@components/Type'
 import { SharedElement } from 'react-navigation-shared-element'
 
 /* set of styles shared among multiple components */
@@ -39,6 +39,10 @@ const TypesWrapper = styled.View`
     flex-wrap:wrap;
 `
 
+const StyledType = styled(Type)`
+                    margin-right:10px;
+                    `
+
 const screenWidth = Dimensions.get('window').width
 
 const Column = styled.View`
@@ -56,19 +60,13 @@ const ImageWrapper = styled(SharedElement)`
                     top: 0;
                     `
 
-const styles = StyleSheet.create({
-    type: {
-        marginRight: 10
-    }
-})
-
 module.exports = {
     StyledPokemonCard,
     Column,
     Number,
     Name,
     TypesWrapper,
+    StyledType,
     ImageWrapper,
-    Image,
-    styles
+    Image
 }
