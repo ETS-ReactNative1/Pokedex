@@ -12,7 +12,8 @@ module.exports = function (api) {
             '@styles': './src/styles',
             '@components': './src/components',
             '@assets': './src/assets',
-            '@redux': './src/redux'
+            '@redux': './src/redux',
+            '@functions': './src/functions'
           }
         }
       ]

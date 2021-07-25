@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from 'prop-types'
-import usePokemonCard from './usePokemonCard'
+import { useBgColor } from '@functions/utilities.js'
 import PokemonDefaultImg from '@assets/images/pokemon-default.png'
 import {
     StyledPokemonCard,
@@ -14,7 +14,7 @@ import {
 } from './styles'
 
 const PokemonCard = ({ number, name, types, image, style, onPress }) => {
-    const { color } = usePokemonCard(image)
+    const { color } = useBgColor(image)
 
     return (
         <StyledPokemonCard style={[{ backgroundColor: color }, style]} onPress={onPress}>
