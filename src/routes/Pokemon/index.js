@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { ImageBackground } from 'react-native'
 import { useBgColor } from '@functions/utilities.js'
 import PokemonLogo from '@assets/images/pokeball.png'
+import { Colors } from '@styles/color'
 import { StyledPokemon, Overlay, BackButton, StyledBackIcon, Image, ImageWrapper } from './styles'
 
 const Pokemon = ({ route, navigation }) => {
@@ -16,7 +17,7 @@ const Pokemon = ({ route, navigation }) => {
                 <Overlay style={{ backgroundColor: color }}>
                 </Overlay>
                 <BackButton onPress={() => navigation.goBack()}>
-                    <StyledBackIcon fill='#000' />
+                    <StyledBackIcon fill={Colors.black} />
                 </BackButton>
                 <ImageWrapper id={pokemon.num}>
                     <Image resizeMode='contain' source={{ uri: pokemon.img }} />
