@@ -19,7 +19,9 @@ Initially, I started this to try out some animations 😂 but it ended up teachi
 - [React Flipper](https://github.com/facebook/flipper) (For debugging - Kind of like DevTools for React Native 👀)
 - [React Navigation Share Element](https://github.com/IjzerenHein/react-navigation-shared-element) (Transitioning component between screens 🚛)
 - [React Native SVG](https://github.com/react-native-svg/react-native-svg) (For importing SVG as components 🥳)
+- [Convert HSL to Hex](https://htmlcolors.com/hsl-to-hex) (Color format converter)
 
 ## References
 - [BuyIt Project](https://github.com/salomaoluiz/BuyIt) by salomaoluiz
 - [Naming Styled Components](https://medium.com/inturn-eng/naming-styled-components-d7097950a245)
+- [Using hooks to separate responsibilities](https://sairys.medium.com/react-separating-responsibilities-using-hooks-b9c90dbb3ab9)
