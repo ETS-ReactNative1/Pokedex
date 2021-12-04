@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { ImageBackground } from 'react-native'
+import BottomSheet from 'reanimated-bottom-sheet'
+import Status from '@routes/Status'
 import { useBgColor } from '@functions/utilities.js'
 import PokemonLogo from '@assets/images/pokeball.png'
 import { Colors } from '@styles/color'
@@ -19,6 +21,12 @@ const Pokemon = ({ route, navigation }) => {
                 <BackButton onPress={() => navigation.goBack()}>
                     <StyledBackIcon fill={Colors.black} />
                 </BackButton>
+                <BottomSheet
+                    snapPoints={['100%', '70%', '20%']}
+                    initialSnap={1}
+                    renderContent={Status}
+                    borderRadius={50}
+                />
                 <ImageWrapper id={pokemon.num}>
                     <Image resizeMode='contain' source={{ uri: pokemon.img }} />
                 </ImageWrapper>

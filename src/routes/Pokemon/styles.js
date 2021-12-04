@@ -25,11 +25,16 @@ const Overlay = styled.View`
 
 const Image = styled.Image`
                 aspect-ratio:1;
-                height:150px;
+                height:200px;
                 `
 
 const ImageWrapper = styled(SharedElement)`
                     align-items: center;
+                    justify-content:center;
+                    width:100%;
+                    height:40%;
+                    position:absolute;
+                    z-index:999;
                     `
 
 module.exports = {

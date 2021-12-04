@@ -1,6 +1,5 @@
 import styled from 'styled-components/native'
 import { Colors, FontSize } from '@styles'
-import { StyleSheet } from 'react-native'
 import SearchIcon from '@assets/icons/search.svg'
 
 const StyledSearchbar = styled.View`
