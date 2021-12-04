@@ -1,4 +1,4 @@
-# Pokedex
+# Pokedex (Mobile)
 
 > Incomplete/ For learning  
 
@@ -14,7 +14,7 @@ Initially, I started this to try out some animations 😂 but it ended up teachi
   <img src="https://github.com/A-amon/Pokedex/blob/master/assets/demo/pokemon.png?raw=true"/>
 </div>
 
-## Tools/Technologies
+## Tools/ Technologies
 - [RN Dominant Color](https://github.com/iran-react-community/rn-dominant-color) (To get dominant color of Pokemon image)
 - [React Flipper](https://github.com/facebook/flipper) (For debugging - Kind of like DevTools for React Native 👀)
 - [React Navigation Share Element](https://github.com/IjzerenHein/react-navigation-shared-element) (Transitioning component between screens 🚛)
