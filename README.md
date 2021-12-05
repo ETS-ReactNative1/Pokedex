@@ -7,7 +7,7 @@ This is a mobile application built on React Native.
 Initially, I started this to try out some animations 😂 but it ended up teaching me lots about React (file organizations, alias path, etc.)  
 
 **Note:** Data is imported from JSON file locally (Merged [Biuni](https://github.com/Biuni/PokemonGO-Pokedex/blob/master/pokedex.json
-)'s and [Fanzeyi](https://github.com/fanzeyi/pokemon.json)'s JSON files) using [JSON Merger VSCode extension](https://github.com/A-amon/json-merger) 
+)'s and [Fanzeyi](https://github.com/fanzeyi/pokemon.json)'s JSON files using [JSON Merger VSCode extension](https://github.com/A-amon/json-merger)) 
 
 ## Screens
 <div style="display:flex;">
