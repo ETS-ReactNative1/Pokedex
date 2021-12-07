@@ -1,17 +1,28 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import PropTypes from 'prop-types'
+import { useDispatch } from 'react-redux'
 import { ImageBackground } from 'react-native'
 import BottomSheet from 'reanimated-bottom-sheet'
-import Status from '@routes/Status'
+import Profile from '@routes/Profile'
 import { useBgColor } from '@functions/utilities.js'
+import { setCurrent } from '@redux/actions/pokemon'
 import PokemonLogo from '@assets/images/pokeball.png'
 import { Colors } from '@styles/color'
 import { StyledPokemon, Overlay, BackButton, StyledBackIcon, Image, ImageWrapper } from './styles'
 
 const Pokemon = ({ route, navigation }) => {
+	const [isOpen, setIsOpen] = useState(false)
     const { pokemon } = route.params
-
     const { color } = useBgColor(pokemon.img)
+	const dispatch = useDispatch()
+
+	const bottomSheetRef = useRef(null)
+
+	useEffect(() => {
+		if(pokemon && color){
+			dispatch(setCurrent({...pokemon,color}))
+		}
+	}, [pokemon, color])
 
     return (
         <StyledPokemon>
@@ -22,12 +33,16 @@ const Pokemon = ({ route, navigation }) => {
                     <StyledBackIcon fill={Colors.black} />
                 </BackButton>
                 <BottomSheet
-                    snapPoints={['100%', '70%', '20%']}
+					ref={bottomSheetRef}
+                    snapPoints={['100%', '70%']}
                     initialSnap={1}
-                    renderContent={Status}
+                    renderContent={() => <Profile name={pokemon.name} types={pokemon.type}/>}
                     borderRadius={50}
+					onOpenStart={()=>setIsOpen(false)}
+					onOpenEnd={() => setIsOpen(true)}
+					onCloseStart={() => setIsOpen(false)}
                 />
-                <ImageWrapper id={pokemon.num}>
+                <ImageWrapper id={pokemon.num} isHide={isOpen}>
                     <Image resizeMode='contain' source={{ uri: pokemon.img }} />
                 </ImageWrapper>
             </ImageBackground>

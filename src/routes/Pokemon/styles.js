@@ -9,6 +9,7 @@ const StyledPokemon = styled.View``
 /* Go Back button */
 const BackButton = styled.TouchableOpacity`
                     padding:10px;
+					z-index:999;
                     `
 
 const StyledBackIcon = styled(BackIcon)`
@@ -33,8 +34,8 @@ const ImageWrapper = styled(SharedElement)`
                     justify-content:center;
                     width:100%;
                     height:40%;
-                    position:absolute;
-                    z-index:999;
+					position:absolute;
+                    z-index:${({isHide}) => isHide?1:500};
                     `
 
 module.exports = {

@@ -1,4 +1,4 @@
-import { GET_ALL_POKEMONS } from '../actionTypes'
+import { GET_ALL_POKEMONS, SET_CURRENT } from '../actionTypes'
 import pokemons from '@redux/pokemon.json'
 
 export const getAllPokemons = (page = 1, length = 50) => {
@@ -6,6 +6,15 @@ export const getAllPokemons = (page = 1, length = 50) => {
         dispatch({
             type: GET_ALL_POKEMONS,
             pokemons
+        })
+    }
+}
+
+export const setCurrent = (pokemon) => {
+    return dispatch => {
+        dispatch({
+            type: SET_CURRENT,
+            pokemon
         })
     }
 }

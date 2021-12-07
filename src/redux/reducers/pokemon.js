@@ -1,7 +1,8 @@
-import { GET_ALL_POKEMONS } from '../actionTypes'
+import { GET_ALL_POKEMONS, SET_CURRENT } from '../actionTypes'
 
 const initialState = {
-    items: []
+    items: [],
+	current:{}
 }
 
 export default function pokemon (state = initialState, action) {
@@ -11,6 +12,11 @@ export default function pokemon (state = initialState, action) {
                 ...state,
                 items: action.pokemons
             }
+		case SET_CURRENT:
+			return {
+				...state,
+				current:action.pokemon
+			}
         default:
             return state
     }

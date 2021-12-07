@@ -1,18 +1,11 @@
 import styled from 'styled-components/native'
-import { Colors } from '@styles/color'
-import Heading from '@components/Heading'
+import Stats from '@components/Stats'
+import {FontSize} from '@styles'
 
-const View = styled.View`
-            background-color:${Colors.white};
-            height:100%;
-            width:100%;
-            `
-
-const Name = styled(Heading)`
-            text-align:center;
-            `
+const StyledStats = styled(Stats)`
+					margin-bottom:${FontSize.regular*1.5}px;
+					`
 
 module.exports = {
-    Name,
-    View
+	StyledStats
 }
