@@ -6,7 +6,12 @@ import { Pokemon } from '@routes'
 import { StyledHome, Title, Description, StyledSearchbar, StyledPokemonCard } from './styles'
 
 const Home = ({ navigation }) => {
-    const { scrollEventHandler, AnimatedFlatList, pokemons, scrollY } = useHome()
+    const { scrollEventHandler, 
+		AnimatedFlatList, 
+		pokemons, 
+		scrollY,
+		searchText,
+		setSearchText } = useHome()
 
     return (
         <StyledHome>
@@ -16,11 +21,14 @@ const Home = ({ navigation }) => {
             <Description>
                 Search for Pokemon by name or using the National Pokedex number.
             </Description>
-            <StyledSearchbar />
+            <StyledSearchbar value={searchText} onChangeText={setSearchText}/>
             {
                 pokemons.length > 0 && <AnimatedFlatList
                     onScroll={scrollEventHandler()}
-                    data={pokemons}
+                    data={pokemons.filter(pokemon => 
+						pokemon.name.
+						toLowerCase().
+						includes(searchText.toLowerCase()))}
                     keyExtractor={(item) => item.num}
                     removeClippedSubviews={true}
                     renderItem={({ item, index }) => {

@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react'
+import { useRef, useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { useIsMounted } from '@functions/utilities.js'
 import Animated from 'react-native-reanimated'
@@ -6,6 +6,7 @@ import { FlatList } from 'react-native'
 import { getAllPokemons } from '@redux/actions/pokemon'
 
 const useHome = () => {
+	const [searchText, setSearchText] = useState('')
     const isMounted = useIsMounted()
 
     const dispatch = useDispatch()
@@ -38,7 +39,9 @@ const useHome = () => {
         scrollEventHandler,
         AnimatedFlatList,
         pokemons,
-        scrollY
+        scrollY,
+		searchText,
+		setSearchText
     }
 }
 
