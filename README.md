@@ -20,6 +20,9 @@ Initially, I started this to try out some animations 😂 but it ended up teachi
 - [React Flipper](https://github.com/facebook/flipper) (For debugging - Kind of like DevTools for React Native 👀)
 - [React Navigation Share Element](https://github.com/IjzerenHein/react-navigation-shared-element) (Transitioning component between screens 🚛)
 - [React Native SVG](https://github.com/react-native-svg/react-native-svg) (For importing SVG as components 🥳)
+- [Reanimated Bottom Sheet](https://github.com/osdnk/react-native-reanimated-bottom-sheet)
+- [Pager View](https://github.com/callstack/react-native-pager-view) (For sliding between tab pages ⬅➡)
+- [Progress Bar](https://github.com/oblador/react-native-progress) (Comes with animation 😁)
 - [Convert HSL to Hex](https://htmlcolors.com/hsl-to-hex) (Color format converter)
 
 ## References
