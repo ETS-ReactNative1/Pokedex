@@ -1,8 +1,6 @@
 # Pokedex (Mobile)
 ![React Native](https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 
-> Incomplete/ For learning  
-
 This is a mobile application built on React Native.  
 Initially, I started this to try out some animations 😂 but it ended up teaching me lots about React (file organizations, alias path, etc.)  
 
