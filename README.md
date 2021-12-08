@@ -9,11 +9,9 @@ Initially, I started this to try out some animations 😂 but it ended up teachi
 **Note:** Data is imported from JSON file locally (Merged [Biuni](https://github.com/Biuni/PokemonGO-Pokedex/blob/master/pokedex.json
 )'s and [Fanzeyi](https://github.com/fanzeyi/pokemon.json)'s JSON files using [JSON Merger VSCode extension](https://github.com/A-amon/json-merger)) 
 
-## Screens
-<div style="display:flex;">
-  <img src="https://github.com/A-amon/Pokedex/blob/master/assets/demo/main.png?raw=true"/>
-  <img src="https://github.com/A-amon/Pokedex/blob/master/assets/demo/pokemon.png?raw=true"/>
-</div>
+## How it works
+<img src="https://github.com/A-amon/Pokedex/blob/master/assets/demo/pokedex-native.gif" width="300"/>
+
 
 ## Tools/ Technologies
 - [RN Dominant Color](https://github.com/iran-react-community/rn-dominant-color) (To get dominant color of Pokemon image)
