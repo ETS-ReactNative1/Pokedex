@@ -52,10 +52,10 @@ const Image = styled.Image`
                 `
 
 const ImageWrapper = styled(SharedElement)`
-                    position: absolute;
+                    width:40%;
+					position: absolute;
                     right: 0;
                     top: 0;
-                    width:40%;
                     `
 
 module.exports = {

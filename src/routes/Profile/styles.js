@@ -9,15 +9,19 @@ const View = styled.View`
             width:100%;
             `
 
+const Header =styled.View`
+			${({isHide}) => isHide?'display:none;':''}
+			`
+
 const Name = styled(Heading)`
             text-align:center;
-			margin-top:${FontSize.regular*1.5}px;
+			margin:${FontSize.regular*1.5}px 0;
             `
 
 const Types = styled.View`
 				flex-direction:row;
 				max-width:400px;
-				margin:${FontSize.regular*1.5}px auto;
+				margin:0 auto;
 				`
 
 const StyledType = styled(Type)`
@@ -25,6 +29,7 @@ const StyledType = styled(Type)`
                     `
 
 module.exports = {
+	Header,
     Name,
     View,
 	Types,

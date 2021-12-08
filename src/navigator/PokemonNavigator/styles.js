@@ -11,7 +11,7 @@ const TabsWrapper = styled.View`
 					flex-direction:row;
 					align-items:center;
 					justify-content:center;
-					margin-bottom:${FontSize.regular*1.5}px;
+					margin:${FontSize.regular*1.5}px 0;
 					`
 
 module.exports = {

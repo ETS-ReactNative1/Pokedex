@@ -49,7 +49,12 @@ const useBgColor = (image) => {
      * @return {void}
      */
     useEffect(() => {
-        getBgColor(image)
+		let isRun = true
+		isRun && getBgColor(image)
+
+		return () => {
+			isRun = false
+		}
     }, [image])
 
     return {

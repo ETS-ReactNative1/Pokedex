@@ -22,6 +22,9 @@ const useHome = () => {
     useEffect(() => {
         if (isMounted.current)
             dispatch(getAllPokemons())
+		return () => {
+			isMounted.current = false
+		}
     }, [])
 
     const scrollEventHandler = () => {

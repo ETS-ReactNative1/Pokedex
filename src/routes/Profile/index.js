@@ -1,23 +1,25 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import PokemonNavigator from '@navigator/PokemonNavigator'
-import { Name, View, Types, StyledType } from './styles'
+import { Header, Name, View, Types, StyledType } from './styles'
 
-const Profile = ({name, types}) => {
+const Profile = ({name, types, isHideHeader}) => {
     return (
         <View>
-            <Name>
-                {name}
-            </Name>
-			<Types>
-				{
-					types.map((type, ind) =>
-						<StyledType key={ind}
-							type={type}
-						/>
-					)
-				}
-			</Types>
+            <Header isHide={isHideHeader}>
+				<Name>
+					{name}
+				</Name>
+				<Types>
+					{
+						types.map((type, ind) =>
+							<StyledType key={ind}
+								type={type}
+							/>
+						)
+					}
+				</Types>
+			</Header>
 			<PokemonNavigator/>
         </View>
     )
@@ -25,7 +27,8 @@ const Profile = ({name, types}) => {
 
 Profile.propTypes = {
 	name:PropTypes.string,
-	types:PropTypes.arrayOf(PropTypes.string)
+	types:PropTypes.arrayOf(PropTypes.string),
+	isHideHeader:PropTypes.bool
 }
 
 export default Profile

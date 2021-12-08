@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import PagerView from 'react-native-pager-view'
 import Status from '@routes/Status'
 import Evolutions from '@routes/Evolutions'
-import { View, Text } from 'react-native'
+import { View } from 'react-native'
 import Tab from '@components/Tab'
 import {StyledView, TabsWrapper} from './styles'
 

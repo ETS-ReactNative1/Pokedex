@@ -49,19 +49,6 @@ const Home = ({ navigation }) => {
                     }}
                 />
             }
-            {/* <ScrollView>
-                {
-                    pokemons.length > 0 && pokemons.map(pokemon =>
-                        <StyledPokemonCard key={pokemon.id} number={pokemon.num}
-                            name={pokemon.name}
-                            types={pokemon.type}
-                            image={pokemon.img}
-                            style={styles.pokemonCard}
-                            onPress={() => navigation.navigate(Pokemon, { pokemon })}
-                        />
-                    )
-                }
-            </ScrollView> */}
         </StyledHome>
     )
 }

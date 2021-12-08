@@ -8,7 +8,7 @@ import { useBgColor } from '@functions/utilities.js'
 import { setCurrent } from '@redux/actions/pokemon'
 import PokemonLogo from '@assets/images/pokeball.png'
 import { Colors } from '@styles/color'
-import { StyledPokemon, Overlay, BackButton, StyledBackIcon, Image, ImageWrapper } from './styles'
+import { StyledPokemon, Overlay, BackButton, StyledBackIcon, Image, ImageWrapper, Name } from './styles'
 
 const Pokemon = ({ route, navigation }) => {
 	const [isOpen, setIsOpen] = useState(false)
@@ -34,9 +34,10 @@ const Pokemon = ({ route, navigation }) => {
                 </BackButton>
                 <BottomSheet
 					ref={bottomSheetRef}
-                    snapPoints={['100%', '70%']}
+                    // snapPoints={['100%', '70%']}
+                    snapPoints={['90%', '70%']}
                     initialSnap={1}
-                    renderContent={() => <Profile name={pokemon.name} types={pokemon.type}/>}
+                    renderContent={() => <Profile name={pokemon.name} types={pokemon.type} isHideHeader={isOpen}/>}
                     borderRadius={50}
 					onOpenStart={()=>setIsOpen(false)}
 					onOpenEnd={() => setIsOpen(true)}
@@ -45,6 +46,9 @@ const Pokemon = ({ route, navigation }) => {
                 <ImageWrapper id={pokemon.num} isHide={isOpen}>
                     <Image resizeMode='contain' source={{ uri: pokemon.img }} />
                 </ImageWrapper>
+				{
+					isOpen && <Name>{pokemon && pokemon.name}</Name>
+				}
             </ImageBackground>
         </StyledPokemon>
     )

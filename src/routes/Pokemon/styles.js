@@ -1,6 +1,6 @@
 import styled from 'styled-components/native'
-import { FontSize } from '@styles'
 import Heading from '@components/Heading'
+import { FontSize, Colors } from '@styles'
 import BackIcon from '@assets/icons/back-arrow.svg'
 import { SharedElement } from 'react-navigation-shared-element'
 
@@ -26,7 +26,7 @@ const Overlay = styled.View`
 
 const Image = styled.Image`
                 aspect-ratio:1;
-                height:200px;
+                height:${FontSize.regular*12}px;
                 `
 
 const ImageWrapper = styled(SharedElement)`
@@ -38,11 +38,22 @@ const ImageWrapper = styled(SharedElement)`
                     z-index:${({isHide}) => isHide?1:500};
                     `
 
+const Name = styled(Heading)`
+			position:absolute;
+			top:2%;
+			text-align:center;
+			width:100%;
+			font-weight:normal;
+			font-size:${FontSize.regular*1.3}px;
+			color:${Colors.white};
+			`
+
 module.exports = {
     StyledPokemon,
     BackButton,
     StyledBackIcon,
     ImageWrapper,
     Image,
-    Overlay
+    Overlay,
+	Name
 }
