@@ -10,7 +10,9 @@ Initially, I started this to try out some animations 😂 but it ended up teachi
 )'s and [Fanzeyi](https://github.com/fanzeyi/pokemon.json)'s JSON files using [JSON Merger VSCode extension](https://github.com/A-amon/json-merger)) 
 
 ## How it works
-<img src="https://github.com/A-amon/Pokedex/blob/master/assets/demo/pokedex-native.gif" width="300"/>
+<img src="https://github.com/A-amon/Pokedex/blob/master/assets/demo/pokedex-native.gif" width="300"/>  
+
+**Note:** The *Moves* screen is empty
 
 
 ## Tools/ Technologies
